@@ -1,0 +1,75 @@
+@mixin ngx-battle-loading() {
+  $width: 64px;
+  $color: black;
+  $border-width: 3px;
+
+  .cssload-loader {
+    position: relative;
+    width: $width;
+    height: $width;
+    border-radius: 50%;
+    perspective: 780px;
+  }
+
+  .cssload-inner {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    border-radius: 50%;
+
+    &.cssload-one {
+      left: 0%;
+      top: 0%;
+      animation: cssload-rotate-one 1.15s linear infinite;
+      border-bottom: $border-width solid $color;
+    }
+
+    &.cssload-two {
+      right: 0%;
+      top: 0%;
+      animation: cssload-rotate-two 1.15s linear infinite;
+      border-right: $border-width solid $color;
+    }
+
+    &.cssload-three {
+      right: 0%;
+      bottom: 0%;
+      animation: cssload-rotate-three 1.15s linear infinite;
+      border-top: $border-width solid $color;
+    }
+  }
+
+  @keyframes cssload-rotate-one {
+    0% {
+      transform: rotateX(35deg) rotateY(-45deg) rotateZ(0deg);
+    }
+
+    100% {
+      transform: rotateX(35deg) rotateY(-45deg) rotateZ(360deg);
+    }
+  }
+
+  @keyframes cssload-rotate-two {
+    0% {
+      transform: rotateX(50deg) rotateY(10deg) rotateZ(0deg);
+    }
+
+    100% {
+      transform: rotateX(50deg) rotateY(10deg) rotateZ(360deg);
+    }
+  }
+
+  @keyframes cssload-rotate-three {
+    0% {
+      transform: rotateX(35deg) rotateY(55deg) rotateZ(0deg);
+    }
+
+    100% {
+      transform: rotateX(35deg) rotateY(55deg) rotateZ(360deg);
+    }
+  }
+}
+
+@include ngx-battle-loading();
+

@@ -1,0 +1,38 @@
+{
+  "name": "@petkit/ngx-loading",
+  "version": "1.0.0",
+  "description": "Angular loading components",
+  "main": "index.js",
+  "scripts": {
+    "version": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0 && git add CHANGELOG.md",
+    "commitmsg": "commitlint -e $GIT_PARAMS"
+  },
+  "ngPackage": {
+    "dest": "../../../dist/ngx-loading",
+    "lib": {
+      "entryFile": "public-api.ts",
+      "umdModuleIds": {}
+    },
+    "whitelistedNonPeerDependencies": []
+  },
+  "peerDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/petkit-io/ngx-loading.git"
+  },
+  "keywords": [
+    "angular",
+    "loading"
+  ],
+  "author": "liuxin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/petkit-io/ngx-loading/issues"
+  },
+  "homepage": "https://github.com/petkit-io/ngx-loading#readme",
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  }
+}
